@@ -1,0 +1,6 @@
+flask
+flask_wtf
+asyncpg
+aiohttp
+aiofiles
+aio_pika
