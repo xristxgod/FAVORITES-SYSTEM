@@ -20,7 +20,7 @@ class DB:
     async def __select_method(sql, is_all: bool = False):
         connection: asyncpg.Connection = None
         try:
-            connection: asyncpg.Connection = await asyncpg.connect(Config)
+            connection: asyncpg.Connection = await asyncpg.connect(Config.DATABASE_URL)
             if is_all:
                 return await connection.fetchrow(sql)
             else:
